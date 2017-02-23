@@ -5,6 +5,7 @@ html
         title Vertigo VR
         
         meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
         
         link(href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" 
             rel="stylesheet")
@@ -22,31 +23,36 @@ html
             .container-fluid
                 table
                     tr
-                        th#brandth
-                            a#brand(href="#") Vertigo
+                        th#nav-brand
+                            a#nav-brand-name(href="#")
+                                img(src="img/logo.png" alt="Vertigo")
                         th#first-link
                             a(href="#") Kontakt
                         th
                             a(href="#") Tjenester
                         th
                             a(href="#") Portefølje
-                        th.active
-                            a(href="#") Hjem
+                        th.nav-active
+                            a(href="#") 
+                                span(style="color: #ff6f00") H
+                                span jem
                     
-        .header(style="color: white")
+        section.header(style="color: white")
             .row-fluid
                 span.col-lg-1
-                span.col-lg-4(style="height: 100%")
-                    h1 Vertigo
-                    h4 VR to Go
+                span.col-lg-4.header-logo
+                    img(src="img/logowithslog.png" alt="Vertigo | VR To Go")
                 span.col-lg-6
-                    .info
+                    .header-info
                         p. 
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        
-        .col-md-4
-            img(href="img/bg1.jpg")
-        .col-md-4
-            img(href="img/bg1.jpg")
-        .col-md-4
-            img(href="img/bg1.jpg")
+        section.examples
+            .col-md-4
+                img(src="img/examples/hexample.png")
+                .examples-stage Planning
+            .col-md-4
+                img(src="img/examples/hexample.png")
+                .examples-stage Building
+            .col-md-4
+                img(src="img/examples/hexample.png")
+                .examples-stage Testing
