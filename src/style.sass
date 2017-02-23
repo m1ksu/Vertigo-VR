@@ -1,6 +1,6 @@
 html, body
     text-align: center
-    font-family: 'Lato', sans-serif
+    font-family: 'Roboto', sans-serif
     margin: 0
 
 body:nth-child(2)
@@ -21,6 +21,7 @@ body:nth-child(2)
     z-index: 1
     .container-fluid
         height: 100%
+        padding: 0
         table
             height: 100%
             width: 100%
@@ -69,12 +70,54 @@ body:nth-child(2)
                             height: 40px
                             margin-top: 10px
                             margin-bottom: 6px
+
+                .navigator-menu
+                    display: none
+                    width: 35px
+                    position: relative
+                    top: 50%
+                    transform: translateY(-50%)
+
+                @media screen and (max-width: 760px)
+                    th:not(#first-link):not(#nav-brand)
+                        display: none
+                    #first-link
+                        cursor: pointer
+                        a
+                            display: none
+                        .navigator-menu
+                            display: inline
+
+        .dropdown
+            display: none
+            width: 350px
+            height: 320px
+            float: right
+            background-color: $navcolor
+            border-left: 1px solid rgba(175, 175, 175, 1)
+            a:hover
+                text-decoration: none
+            .dropdown-link
+                border-bottom: 1px solid rgba(175, 175, 175, 1)
+                height: 80px
+                width: 100%
+                font-size: 36px
+                font-weight: bold
+                font-variant: small-caps
+                div
+                    color: white
+                    position: relative
+                    top: 50%
+                    transform: translateY(-50%)
+
+        @media screen and (max-width: 760px)
+            display: block
 .header
     background: transparent
-    min-height: 920px
+    min-height: 915px
     position: relative
     box-shadow: inset 0px -5px 20px 0px rgba(0, 0, 0, 0.25)
-    & > *
+    & > .row-fluid
         margin-left: auto
         margin-right: auto
         position: absolute
@@ -83,13 +126,20 @@ body:nth-child(2)
         *
             font-variant: small-caps
             img
+                display: block
+                margin-right: auto
+                margin-left: auto
+
                 position: relative
                 top: 50%
                 transform: translateY(-50%)
+
         .header-logo
             height: 243px
+
     .header-info
         font-variant: small-caps
+        font-size: 28px
         background-color: rgba(0, 0, 0, 0.65)
         color: white
         outline: 2px solid rgba(0, 0, 0, 0.65)
@@ -99,6 +149,9 @@ body:nth-child(2)
             text-shadow: 2px 2px rgba(0, 0, 0, 0.5)
             display: inline
             vertical-align: middle
+@media screen and (max-width: 555px)
+    .header
+        min-height: 1100px
 
 .examples
     margin-top: 75px
