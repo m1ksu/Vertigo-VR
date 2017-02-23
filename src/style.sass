@@ -1,15 +1,14 @@
 html, body
     text-align: center
-    font-family: 'Source Sans Pro', sans-serif
+    font-family: 'Lato', sans-serif
     margin: 0
-    height: 120%
 
 body:nth-child(2)
     margin-top: 60px
 
 .navigator
-    $navcolor: #222222
-    $navselectcolor: black
+    $navcolor: #002F41
+    $navselectcolor: darken($navcolor, 7%)
 
     position: fixed
     top: 0%
@@ -37,8 +36,6 @@ body:nth-child(2)
                     position: relative
                     text-align: center
                     a
-                        padding-top: 18.5px
-                        padding-bottom: 18.5px
                         position: absolute
                         top: 50%
                         transform: translateY(-50%)
@@ -49,28 +46,32 @@ body:nth-child(2)
                         text-decoration: none
                         color: white
                         font-weight: 300
-                .active
-                    background-color: black
-                    box-shadow: inset 0 -2px 0 0px blue
+                .nav-active
+                    background-color: $navselectcolor
+                    box-shadow: inset 0 -2px 0 0px #ff6f00
 
-                th:not(#brandth)
+                th:not(#nav-brand)
                     float: right
-                th:not(#brandth):hover
+                th:not(#nav-brand):hover
                     background-color: $navselectcolor
 
                 #first-link
                     margin-right: 5%
 
-                #brandth
+                #nav-brand
                     margin-left: 5%
                     float: left
-                    #brand
+                    #nav-brand-name
                         font-size: 30px
                         font-weight: 500
-
+                        img
+                            width: 200px
+                            height: 40px
+                            margin-top: 10px
+                            margin-bottom: 6px
 .header
     background: transparent
-    min-height: 500px
+    min-height: 920px
     position: relative
     box-shadow: inset 0px -5px 20px 0px rgba(0, 0, 0, 0.25)
     & > *
@@ -81,16 +82,13 @@ body:nth-child(2)
         transform: translateY(-50%)
         *
             font-variant: small-caps
-            h1
-                font-size: 96px
-                font-weight: 600
-                margin-bottom: 8px
-                text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25)
-            h4
-                font-size: 48px
-                margin: 0
-                text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25)
-    .info
+            img
+                position: relative
+                top: 50%
+                transform: translateY(-50%)
+        .header-logo
+            height: 243px
+    .header-info
         font-variant: small-caps
         background-color: rgba(0, 0, 0, 0.65)
         color: white
@@ -101,3 +99,18 @@ body:nth-child(2)
             text-shadow: 2px 2px rgba(0, 0, 0, 0.5)
             display: inline
             vertical-align: middle
+
+.examples
+    margin-top: 75px
+    text-align: center
+    img
+        width: 400px
+        margin-right: auto
+        margin-left: auto
+        margin-bottom: 35px
+        box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.65)
+    .examples-stage
+        font-size: 36px
+        font-weight: bold
+        color: #050505
+        text-shadow: 4px 4px 5px rgba(0, 0, 0, 0.3)
