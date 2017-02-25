@@ -1,5 +1,6 @@
 $(document).ready(function () {
-    $('.header').parallax({imageSrc: 'img/bg1.jpg'});
+    $('.h-1').parallax({imageSrc: 'img/bg1.jpg'});
+    $('.h-2').parallax({imageSrc: 'img/bg2.jpg'});
 
     $('.dropdown').slideUp(0);
 
