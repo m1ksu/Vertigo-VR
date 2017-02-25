@@ -19,37 +19,10 @@ html
 
 
     body#body
-        .navigator
-            .container-fluid
-                table
-                    tr
-                        th#nav-brand
-                            a#nav-brand-name(href="#")
-                                img(src="img/logo.png" alt="Vertigo")
-                        th#first-link
-                            a(href="#") Kontakt
-                            img.navigator-menu(src="img/menu.png")
-                        th
-                            a(href="#") Tjenester
-                        th
-                            a(href="#") Portefølje
-                        th.nav-active
-                            a(href="#")
-                                span(style="color: #ff6f00") H
-                                span jem
-                .dropdown
-                    a(href="#")
-                        .dropdown-link
-                            div Hjem
-                    a(href="#")
-                        .dropdown-link
-                            div Portefølje
-                    a(href="#")
-                        .dropdown-link
-                            div Tjenester
-                    a(href="#")
-                        .dropdown-link
-                            div Kontakt
+
+        .navloc
+        script(type="text/javascript").
+            $('.navloc').load('global/nav.html');
 
         section.header.h-1(style="color: white")
             .row-fluid
@@ -70,3 +43,13 @@ html
             .row.margin-top
                 .col-md-10.col-md-offset-1.buffer-top.examples-description Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
         section.header.h-2
+        section.bio
+            .col-md-12
+                .col-md-6.col-md-offset-3
+                    h1 About Us
+                    p.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+
+        .footloc
+        script(type="text/javascript").
+            $('.footloc').load('global/footer.html');
