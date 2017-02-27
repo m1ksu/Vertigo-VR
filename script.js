@@ -6,7 +6,7 @@ $(document).ready(function () {
 
     var dropdownToggled = false;
     $('#first-link').on('click', function() {
-        if (!dropdownToggled) {
+        if (!dropdownToggled && $(window).width() < 760) {
             $('.dropdown').slideDown();
             dropdownToggled = true;
         } else {
@@ -15,3 +15,9 @@ $(document).ready(function () {
         }
     });
 })
+
+$(window).resize(function() {
+    if ($(window).width() < 760) {
+        $('.dropdown').slideUp();
+    }
+});
