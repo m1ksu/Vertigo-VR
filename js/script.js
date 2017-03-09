@@ -1,6 +1,12 @@
 $(document).ready(function () {
     $('.h-1').parallax({imageSrc: 'img/bg1.jpg'});
     $('.h-2').parallax({imageSrc: 'img/bg2.jpg'});
+    $('.h-3').parallax({imageSrc: 'img/bg3.jpg'});
+
+    $(".index-title").typed({
+        strings: ["Visionary", "Virtual", "Visual", "Vivid", "Versatile", "Vertigo."],
+        typeSpeed: 75
+    });
 
     $('.dropdown').slideUp(0);
 
@@ -14,6 +20,7 @@ $(document).ready(function () {
             dropdownToggled = false;
         }
     });
+
     navActive(null);
     var page = window.location.pathname;
     switch (page) {
@@ -33,7 +40,6 @@ $(document).ready(function () {
             navActive('contact');
             break;
     }
-    console.log(page);
 
     function navActive(page) {
         $('.navigator *').removeClass("nav-active");
