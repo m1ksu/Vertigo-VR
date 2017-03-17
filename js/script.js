@@ -2,6 +2,7 @@ $(document).ready(function () {
     $('.h-1').parallax({imageSrc: 'img/bg1.jpg'});
     $('.h-2').parallax({imageSrc: 'img/bg2.jpg'});
     $('.h-3').parallax({imageSrc: 'img/bg3.jpg'});
+    hsize();
 
     $(".index-title").typed({
         strings: ["Visionary", "Virtual", "Visual", "Vivid", "Versatile", "Vertigo."],
@@ -50,5 +51,15 @@ $(document).ready(function () {
 $(window).resize(function() {
     if ($(window).width() < 760) {
         $('.dropdown').slideUp();
-    }
+    } hsize();
 });
+
+function hsize() {
+    if ($(window).width() < 1400) {
+        $('.h-3').css('background-image', 'url("img/bg1.jpg")');
+        $('.services-logo').attr('src', 'img/logo.svg');
+    } else {
+        $('.h-3').css('background-image', 'url("img/bg3.jpg")');
+        $('.services-logo').attr('src', 'img/logodark.svg');
+    }
+}

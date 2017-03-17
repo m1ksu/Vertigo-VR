@@ -129,6 +129,31 @@ body:nth-child(2)
             table
                 width: 100%
 
+.footer
+    background-color: #002f41
+    & > *
+        color: white
+        background-color: #002f41
+        h1
+            padding-top: 48px
+            margin-top: 0
+            font-variant: small-caps
+            font-size: 78px
+        h4
+            margin-bottom: 1px
+            font-size: 30px
+            .contact-title
+                font-weight: bold
+            span:not(.contact-title)
+                font-weight: lighter
+        h3
+            font-size: 34px
+            padding-top: 10px
+            padding-bottom: 24px
+            font-weight: bold
+            a
+                font-style: italic
+
 .typed-cursor
     display: none
 
@@ -219,31 +244,6 @@ body:nth-child(2)
         img
             width: 95%
 
-.footer
-    background-color: #002f41
-    & > *
-        color: white
-        background-color: #002f41
-        h1
-            padding-top: 48px
-            margin-top: 0
-            font-variant: small-caps
-            font-size: 78px
-        h4
-            margin-bottom: 1px
-            font-size: 30px
-            .contact-title
-                font-weight: bold
-            span:not(.contact-title)
-                font-weight: lighter
-        h3
-            font-size: 34px
-            padding-top: 10px
-            padding-bottom: 36px
-            font-weight: bold
-            a
-                font-style: italic
-
 
 // ============** CONTACT **============ //
 .contact
@@ -312,8 +312,24 @@ body:nth-child(2)
 .services
     img
         width: 70%
-        margin-top: 47.5%
-
+        margin-top: 15%
+    p
+        font-size: 20px
+        margin: 50px 100px
+        br
+            line-height: 40px
+@media screen and (max-width: 1400px)
+    .services
+        .row
+            .col-md-4
+                width: 100%
+                img
+                    width: 60%
+                p
+                    padding: 0 70px
+                    color: white
+                    br
+                        display: none
 // Modifiers
 .buffer-top
     margin-top: 25px

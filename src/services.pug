@@ -20,10 +20,25 @@ html
 
     body#body
 
-        section.header.services.h-3
-            .col-md-4
-                img(src="img/logodark.svg")
-
         .navloc
+            script(type="text/javascript").
+                $('.navloc').load('global/nav.html');
+
+        section.header.services.h-3
+            .row
+                .col-md-4
+                    img.services-logo(src="img/logodark.svg")
+            .row
+                .col-md-4
+                    p.
+                        Hos Vertigo konverterer vi CAD-modeller til en færdig virtual reality oplevelse. #[br]
+
+                        VR kan bruges til at visualisere arkitekters visioner for deres kunder, og sikrer at arkitekt og kunde er på samme side. #[br]
+
+                        En person opslugt i virtual reality tiltrækker utvivlsomt et publikum. Derfor er det en sikker vinder at have VR-briller med til eksempelvis en messe. #[br]
+
+                        Har du en ide til hvordan VR kan udnyttes i  din virksomhed? Kontakt os, få en snak og eventuelt en demonstration. #[br]
+
+        .footloc
         script(type="text/javascript").
-            $('.navloc').load('global/nav.html');
+            $('.footloc').load('global/footer.html');
