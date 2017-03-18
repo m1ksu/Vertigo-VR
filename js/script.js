@@ -32,20 +32,17 @@ $(document).ready(function () {
     switch (page) {
         case "/":
             navActive('home');
-            break;
 
         case "/portfolio.html":
             navActive('portfolio');
-            break;
 
         case "/services.html":
             navActive('services');
-            break;
 
         case "/contact.html":
             navActive('contact');
-            break;
     }
+    console.log(page);
 
     function navActive(page) {
         $('.navigator *').removeClass("nav-active");
