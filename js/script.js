@@ -29,18 +29,20 @@ $(document).ready(function () {
 
     navActive(null);
     var page = window.location.pathname;
+    var pre = "/Vertigo-VR";
     switch (page) {
-        case "/":
+        case pre + "/":
             navActive('home');
-
-        case "/portfolio.html":
+            break;
+        case pre + "/portfolio.html":
             navActive('portfolio');
-
-        case "/services.html":
+            break;
+        case pre + "/services.html":
             navActive('services');
-
-        case "/contact.html":
+            break;
+        case pre + "/contact.html":
             navActive('contact');
+            break;
     }
     console.log(page);
 
