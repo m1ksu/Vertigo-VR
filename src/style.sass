@@ -178,16 +178,16 @@ body:nth-child(2)
         top: 50%
         transform: translateY(-50%)
         *
-            .index-title
+            .index-title, .index-title-v
                 font-family: 'Quantico', sans-serif
                 font-size: 96px
                 margin: 0 auto
                 position: relative
                 top: 50%
                 transform: translateY(-50%)
-            .index-title::first-letter
-                color: #ff8700
-
+                display: inline
+            .index-title-v
+                color: #ff8f09
         .header-logo
             height: 243px
 
@@ -310,11 +310,11 @@ body:nth-child(2)
 
 // ============** SERVICES **============ //
 .services
-    img
-        width: 70%
-        margin-top: 15%
     p
-        font-size: 20px
+        color: white
+        font-weight: bold
+        letter-spacing: 1px
+        font-size: 24px
         margin: 50px 100px
         br
             line-height: 40px
@@ -323,13 +323,20 @@ body:nth-child(2)
         .row
             .col-md-4
                 width: 100%
-                img
-                    width: 60%
                 p
-                    padding: 0 70px
-                    color: white
+                    font-size: 32px
+                    font-weight: 400
+
+                    background-color: rgba(0,0,0,0.5)
+                    outline: rgba(0,0,0,0.5) solid 3px
+                    outline-offset: 7px
+
+                    padding: 50px
+                    margin-left: 50px
+                    margin-left: 50px
                     br
                         display: none
+
 // Modifiers
 .buffer-top
     margin-top: 25px

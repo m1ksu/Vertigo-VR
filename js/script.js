@@ -4,10 +4,15 @@ $(document).ready(function () {
     $('.h-3').parallax({imageSrc: 'img/bg3.jpg'});
     hsize();
 
-    $(".index-title").typed({
-        strings: ["Visionary", "Virtual", "Visual", "Vivid", "Versatile", "Vertigo."],
-        typeSpeed: 75
-    });
+    function typed() {
+        $(".index-title").typed({
+            strings: ["isionary", "irtual", "isual", "ivid", "ersatile", "ertigo."],
+            typeSpeed: 75,
+            backSpeed: 75
+        });
+    }
+
+    typed();
 
     $('.dropdown').slideUp(0);
 
