@@ -1,18 +1,10 @@
 $(document).ready(function () {
-    $('.h-1').parallax({imageSrc: 'img/bg1.jpg'});
-    $('.h-2').parallax({imageSrc: 'img/bg2.jpg'});
-    $('.h-3').parallax({imageSrc: 'img/bg3.jpg'});
+    // Parallax
+        $('.h-1').parallax({imageSrc: 'img/bg1.jpg'});
+        $('.h-2').parallax({imageSrc: 'img/bg2.jpg'});
+        $('.h-3').parallax({imageSrc: 'img/bg3.jpg'});
+
     hsize();
-
-    function typed() {
-        $(".index-title").typed({
-            strings: ["isionary", "irtual", "isual", "ivid", "ersatile", "ertigo."],
-            typeSpeed: 75,
-            backSpeed: 75
-        });
-    }
-
-    typed();
 
     $('.dropdown').slideUp(0);
 
@@ -28,6 +20,7 @@ $(document).ready(function () {
     });
 
     navActive(null);
+
     var page = window.location.pathname;
     var pre = ""
     //var pre = "/Vertigo-VR";
@@ -51,7 +44,7 @@ $(document).ready(function () {
         $('.navigator *').removeClass("nav-active");
         $("#" + page).addClass("nav-active");
     }
-})
+});
 
 $(window).resize(function() {
     if ($(window).width() < 760) {
