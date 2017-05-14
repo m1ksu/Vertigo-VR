@@ -2,7 +2,7 @@ $(document).ready(function () {
     // Parallax
         $('.h-1').parallax({imageSrc: 'img/bg1.jpg'});
         $('.h-2').parallax({imageSrc: 'img/bg2.jpg'});
-        $('.h-3').parallax({imageSrc: 'img/bg3.jpg'});
+        $('.h-3').parallax({imageSrc: 'img/demo.gif'});
 
     hsize();
 
@@ -22,17 +22,13 @@ $(document).ready(function () {
     navActive(null);
 
     var page = window.location.pathname;
-    var pre = ""
-    //var pre = "/Vertigo-VR";
+    var pre = "/Vertigo-VR";
     switch (page) {
         case pre + "/":
             navActive('home');
             break;
         case pre + "/portfolio.html":
             navActive('portfolio');
-            break;
-        case pre + "/services.html":
-            navActive('services');
             break;
         case pre + "/contact.html":
             navActive('contact');
@@ -54,10 +50,8 @@ $(window).resize(function() {
 
 function hsize() {
     if ($(window).width() < 1400) {
-        $('.h-3').css('background-image', 'url("img/bg1.jpg")');
         $('.services-logo').attr('src', 'img/logo.svg');
     } else {
-        $('.h-3').css('background-image', 'url("img/bg3.jpg")');
         $('.services-logo').attr('src', 'img/logodark.svg');
     }
 }
