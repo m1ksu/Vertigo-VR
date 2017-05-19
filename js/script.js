@@ -22,7 +22,8 @@ $(document).ready(function () {
     navActive(null);
 
     var page = window.location.pathname;
-    var pre = "/Vertigo-VR";
+    var pre = "";
+    //var pre = "/Vertigo-VR";
     switch (page) {
         case pre + "/":
             navActive('home');
