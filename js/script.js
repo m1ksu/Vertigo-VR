@@ -35,7 +35,6 @@ $(document).ready(function () {
             navActive('contact');
             break;
     }
-    console.log(pre + page);
 
     function navActive(page) {
         $('.navigator *').removeClass("nav-active");
